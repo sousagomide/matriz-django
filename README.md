@@ -54,7 +54,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
         </tr>
         <tr>
             <td>4</td>
-            <td>Veja a seguir em <a>https://github.com/sousagomide/matriz-django#settings.py</a></td>
+            <td>Veja a seguir em <a href="https://github.com/sousagomide/matriz-django#settingspy">settings.py</a></td>
             <td>Configuração do settings.py do projeto</td>
         </tr>
         <tr>
@@ -72,22 +72,22 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
 
 # settings.py
 
-import os
-ALLOWED_HOSTS = ['*']
-'DIRS': ['templates'],
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'matriz',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
-        'PORT': '5433' # ou porta 5432
-    }
-}
-LANGUAGE_CODE = 'pt-br'
-TIME_ZONE = 'America/Sao_Paulo'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_URL = 'media/'
+import os<br/>
+ALLOWED_HOSTS = ['*']<br/>
+'DIRS': ['templates'],<br/>
+DATABASES = {<br/>
+    'default': {<br/>
+        'ENGINE': 'django.db.backends.postgresql',<br/>
+        'NAME': 'matriz',<br/>
+        'USER': 'postgres',<br/>
+        'PASSWORD': 'postgres',<br/>
+        'HOST': 'localhost',<br/>
+        'PORT': '5433' # ou porta 5432<br/>
+    }<br/>
+}<br/>
+LANGUAGE_CODE = 'pt-br'<br/>
+TIME_ZONE = 'America/Sao_Paulo'<br/>
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')<br/>
+MEDIA_URL = 'media/'<br/>
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
