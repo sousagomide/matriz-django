@@ -12,7 +12,9 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
 
 # Modelagem
 
-...
+<center>
+    <img src="https://github.com/sousagomide/matriz-django/blob/main/database/model_img.png" alt="Modelagem do Banco de Dados"/>
+</center>
 
 # Bibliotecas
 
