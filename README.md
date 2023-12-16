@@ -72,6 +72,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
 
 # settings.py
 
+<p>
 import os<br/>
 ALLOWED_HOSTS = ['*']<br/>
 'DIRS': ['templates'],<br/>
@@ -90,4 +91,4 @@ TIME_ZONE = 'America/Sao_Paulo'<br/>
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')<br/>
 MEDIA_URL = 'media/'<br/>
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+</p>
