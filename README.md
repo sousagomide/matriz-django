@@ -72,23 +72,23 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
 
 # settings.py
 
-<p>
-import os<br/>
-ALLOWED_HOSTS = ['*']<br/>
-'DIRS': ['templates'],<br/>
-DATABASES = {<br/>
-    'default': {<br/>
-        'ENGINE': 'django.db.backends.postgresql',<br/>
-        'NAME': 'matriz',<br/>
-        'USER': 'postgres',<br/>
-        'PASSWORD': 'postgres',<br/>
-        'HOST': 'localhost',<br/>
-        'PORT': '5433' # ou porta 5432<br/>
+<pre>
+    import os<br/>
+    ALLOWED_HOSTS = ['*']<br/>
+    'DIRS': ['templates'],<br/>
+    DATABASES = {<br/>
+        'default': {<br/>
+            'ENGINE': 'django.db.backends.postgresql',<br/>
+            'NAME': 'matriz',<br/>
+            'USER': 'postgres',<br/>
+            'PASSWORD': 'postgres',<br/>
+            'HOST': 'localhost',<br/>
+            'PORT': '5433' # ou porta 5432<br/>
+        }<br/>
     }<br/>
-}<br/>
-LANGUAGE_CODE = 'pt-br'<br/>
-TIME_ZONE = 'America/Sao_Paulo'<br/>
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')<br/>
-MEDIA_URL = 'media/'<br/>
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-</p>
+    LANGUAGE_CODE = 'pt-br'<br/>
+    TIME_ZONE = 'America/Sao_Paulo'<br/>
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')<br/>
+    MEDIA_URL = 'media/'<br/>
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+</pre>
