@@ -10,6 +10,10 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
     <li>Postgresql</li>
 </ul>
 
+# Modelagem
+
+...
+
 # Bibliotecas
 
 ...
@@ -19,8 +23,8 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
 <table>
     <thead>
         <tr>
-            <td>Etapa</td>
-            <td>Comando</td>
+            <td>Etapas</td>
+            <td>Comandos</td>
             <td>Descrição</td>
         </tr>
     </thead>
