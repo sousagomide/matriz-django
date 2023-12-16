@@ -49,8 +49,45 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
         </tr>
         <tr>
             <td>3</td>
-            <td>django-admin startproject matriz</td>
+            <td>django-admin startproject matriz .</td>
             <td>Criação do projeto</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Veja a seguir em <a>https://github.com/sousagomide/matriz-django#settings.py</a></td>
+            <td>Configuração do settings.py do projeto</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>python manage.py makemigrations</td>
+            <td>Criar as migrações</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>python manage.py migrate</td>
+            <td>Executar as migrações</td>
         </tr>
     </tbody>
 </table>
+
+# settings.py
+
+import os
+ALLOWED_HOSTS = ['*']
+'DIRS': ['templates'],
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'matriz',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5433' # ou porta 5432
+    }
+}
+LANGUAGE_CODE = 'pt-br'
+TIME_ZONE = 'America/Sao_Paulo'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
