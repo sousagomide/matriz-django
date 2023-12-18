@@ -6,7 +6,44 @@
 {% endblock %}
 
 {% block container %}
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Sobre</h1>
+    <div class="align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">
+            <div class="card bg-light text-black shadow" style="border: 0px">
+                <div class="card-body">
+                    Sobre
+                </div>
+            </div>
+        </h1>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Sistema de Gerenciamento Matricial</h6>
+        </div>
+        <div class="card-body">
+            <p>O Sistema de Gerenciamento Matricial (SGM) foi desenvolvido com intuito de aperfeiçoar as técnicas de programação utilizando Python e Django. Esse sistema funciona sob uma arquitetura MVT e utiliza o banco de dados PostgreSQL.
+            Este projeto é público e seu código pode ser baixado e utilizado por qualquer desenvolvedor.</p>
+            <p>O template do projeto foi utilizado a partir de um tema gratuito que pode ser obtido no site <a href="https://startbootstrap.com/theme/sb-admin-2" target="blank">Start Bootstrap</a></p>
+        </div>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Desenvolvedores</h6>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li>
+                    Rodrigo de Sousa Gomide
+                    <ul>
+                        <li>E-mail: sousagomide@gmail.com</li>
+                        <li><a href="https://linkedin.com/in/denecley-alvim-10111b207" target="blank">LinkedIn</a></li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
     </div>
 {% endblock %}

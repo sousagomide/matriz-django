@@ -1,8 +1,12 @@
+body {
+    background-color: #d2d0cd;
+}
+
 .limite{
     padding-top: 20px;
 }
 
 .bg-gradient-primary {
-    background-color: #359830;
-    background-image: linear-gradient(180deg, #359830 10%, #48cf41 100%);
+    background-color: #292929;
+    background-image: linear-gradient(180deg, #292929 10%, #292929 100%);
 }
