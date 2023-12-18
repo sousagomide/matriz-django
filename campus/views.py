@@ -14,3 +14,14 @@ class CampusCreate(CreateView):
     fields = ['nome', 'sigla']
     template_name = 'campus/form.html'
     success_url = reverse_lazy('campus-index')
+
+class CampusUpdate(UpdateView):
+    model = Campus
+    fields = ['nome', 'sigla']
+    template_name = 'campus/form.html'
+    success_url = reverse_lazy('campus-index')
+
+class CampusDelete(DeleteView):
+    model = Campus
+    template_name = 'campus/form-excluir.html'
+    success_url = reverse_lazy('campus-index')

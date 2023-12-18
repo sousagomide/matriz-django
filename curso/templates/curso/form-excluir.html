@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>SGM - Cadastrar Campus</title>
+{% endblock %}
+
+{% block container %}
+    <div class="align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">
+            Excluir Campus
+        </h1>
+    </div>
+    <form action="" method="POST">
+        <p>Deseja excluir o registro: {{ object }}?</p>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-danger">Excluir</button>
+    </form>
+{% endblock %}

@@ -14,3 +14,14 @@ class CursoCreate(CreateView):
     fields = ['nome', 'tipo', 'periodo', 'campus']
     template_name = 'curso/form.html'
     success_url = reverse_lazy('curso-index')
+
+class CursoUpdate(UpdateView):
+    model = Curso
+    fields = ['nome', 'tipo', 'periodo', 'campus']
+    template_name = 'curso/form.html'
+    success_url = reverse_lazy('curso-index')
+
+class CursoDelete(DeleteView):
+    model = Curso
+    template_name = 'curso/form-excluir.html'
+    success_url = reverse_lazy('curso-index')
