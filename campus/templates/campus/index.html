@@ -11,4 +11,76 @@
             Cadastrar Campus
         </h1>
     </div>
+    
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="row">
+                <div class="col-x1-5 col-md-9 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="h5 mb-0 font-weight-bold text-primary" style = "padding: 11px">Registro dos Campus</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div style = "position: absolute; left: 70%;">
+                                        <a href="{% url 'campus-create' %}" class="btn btn-dark">Adicionar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Sigla</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Sigla</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        {% for c in object_list %}
+                            <tr>
+                                <td>{{ c.nome }}</td>
+                                <td>{{ c.sigla }}</td>
+                                <td align="center">
+                                    <a href="{% url 'campus-update' c.id %}" style = "padding-right: 20px; text-decoration: none;">
+                                        <i class="fas fa-solid fa-edit fa-lg"></i>
+                                    </a>
+                                    <a href="{% url 'campus-delete' c.id %}">
+                                        <i class="fas fa-solid fa-trash fa-lg"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="4">Nenhum registro.</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 {% endblock %}

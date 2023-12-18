@@ -1,11 +1,13 @@
 from django.urls import reverse_lazy
 from django.views.generic import (CreateView, DeleteView, TemplateView,
                                   UpdateView)
+from django.views.generic.list import ListView
 
 from campus.models import Campus
 
 
-class CampusIndexView(TemplateView):
+class CampusIndexView(ListView):
+    model = Campus
     template_name = 'campus/index.html'
 
 

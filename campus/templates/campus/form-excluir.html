@@ -16,5 +16,6 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-danger">Excluir</button>
+        <a href="{% url 'campus-index' %}" class="btn btn-primary">Cancelar</a>
     </form>
 {% endblock %}
