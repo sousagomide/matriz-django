@@ -69,8 +69,8 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
         </tr>
         <tr>
             <td>7</td>
-            <td>python manage.py startapp home</td>
-            <td>Criar os módulos: home</td>
+            <td>django-admin startapp home</td>
+            <td>Criar os módulos: home, campus</td>
         </tr>
     </tbody>
 </table>
