@@ -67,6 +67,11 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
             <td>python manage.py migrate</td>
             <td>Executar as migrações</td>
         </tr>
+        <tr>
+            <td>7</td>
+            <td>python manage.py startapp home</td>
+            <td>Criar os módulos: home</td>
+        </tr>
     </tbody>
 </table>
 
@@ -88,7 +93,9 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
     }
     LANGUAGE_CODE = 'pt-br'
     TIME_ZONE = 'America/Sao_Paulo'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static')
+    ]
     MEDIA_URL = 'media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 </pre>
