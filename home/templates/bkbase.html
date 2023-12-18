@@ -1,0 +1,40 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+        <title>Base</title>
+    {% endblock %}
+    {% bootstrap_css %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+</head>
+<body>
+    {% block menu %}
+        <div class='bg-light'>
+            Código do menu
+        </div>
+    {% endblock %}
+    {% block destaque %}
+        <div class='bg-secondary'>
+            Figuras de destaque
+        </div>
+    {% endblock %}
+    
+    <div class="container">
+        {% block conteudo %}
+            <h3>Template BASE</h3>
+            <p>Conteúdo da página</p>
+        {% endblock %}
+    </div>
+    
+    {% block footer %}
+        <div class='bg-light'>
+            Footer
+        </div>
+    {% endblock %}
+    {% bootstrap_javascript jquery="full" %}
+</body>
+</html>

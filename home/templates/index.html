@@ -1,17 +1,12 @@
-{% load bootstrap4 %}
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    {% bootstrap_css %}
-    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
-</head>
-<body>
-    <img src="{% static 'img/logo.png' %}" alt="LOGO" width="200">
-    <h1>Bem vindo ao módulo página.</h1>
-    {% bootstrap_javascript jquery="full" %}
-</body>
-</html>
+
+{% block title %}
+    <title>SGM - Home</title>
+{% endblock %}
+
+{% block container %}
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Área de Trabalho</h1>
+    </div>
+{% endblock %}
