@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'campus',
+    'curso',
     'stdimage',
     'bootstrap4'
 ]

@@ -70,7 +70,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
         <tr>
             <td>7</td>
             <td>django-admin startapp home</td>
-            <td>Criar os módulos: home, campus</td>
+            <td>Criar os módulos: home, campus, curso</td>
         </tr>
     </tbody>
 </table>

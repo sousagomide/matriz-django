@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from campus.models import Campus
+
+
+@admin.register(Campus)
+class CampusAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'sigla')
+
+
