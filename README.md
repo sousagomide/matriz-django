@@ -46,7 +46,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
         </tr>
         <tr>
             <td>2</td>
-            <td>pip install django whitenoise django-bootstrap4 django-stdimage psycopg2.binary</td>
+            <td>pip install django whitenoise django-bootstrap-v5 django-stdimage psycopg2.binary django-crispy-forms crispy-bootstrap5</td>
             <td>Instalação das bibliotecas</td>
         </tr>
         <tr>
