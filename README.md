@@ -72,7 +72,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
         <tr>
             <td>7</td>
             <td>django-admin startapp home</td>
-            <td>Criar os módulos: home, campus, curso, nucleo</td>
+            <td>Criar os módulos: autenticacao, home, campus, curso, nucleo</td>
         </tr>
     </tbody>
 </table>
@@ -108,4 +108,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
     ]
     MEDIA_URL = 'media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    LOGIN_REDIRECT_URL = 'index'
+    LOGOUT_REDIRECT_URL = 'login'
+    LOGIN_URL = 'login'
 </pre>
