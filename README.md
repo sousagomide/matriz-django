@@ -21,7 +21,9 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
 <ul>
     <li>django</li>
     <li>whitenoise</li>
-    <li>django-bootstrap4</li>
+    <li>django-bootstrap-v5</li>
+    <li>django-crispy-forms</li>
+    <li>crispy-bootstrap5</li>
     <li>django-stdimage</li>
     <li>psycopg2.binary</li>
 </ul>
@@ -70,7 +72,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
         <tr>
             <td>7</td>
             <td>django-admin startapp home</td>
-            <td>Criar os módulos: home, campus, curso</td>
+            <td>Criar os módulos: home, campus, curso, nucleo</td>
         </tr>
     </tbody>
 </table>
@@ -80,6 +82,14 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
 <pre>
     import os
     ALLOWED_HOSTS = ['*']
+    INSTALLED_APPS = [
+        'stdimage',
+        'bootstrap5',
+        'crispy_forms',
+        'crispy_bootstrap5'
+    ]
+    CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+    CRISPY_TEMPLATE_PACK = 'bootstrap5'
     'DIRS': ['templates'],
     DATABASES = {
         'default': {

@@ -15,26 +15,26 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <div class="row">
-                <div class="col-x1-5 col-md-9 mb-4">
+                <div class="col-x1-5 col-md-12 mb-4">
                     <div class="card border-left-primary shadow h-100 py-2">
-                        <div class="card-body">
+                        <div class="card-body" style="padding: 0px;">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="h5 mb-0 font-weight-bold text-primary" style = "padding: 11px">Registro dos Campus</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                    
+                                    <div class="row">
+                                        
+                                        <div class="col-x1-3 col-md-6 mb-4" style = "padding: 10px; margin-bottom: 0px !important; padding-left: 30px !important;">
+                                            <div class="h5 mb-0 font-weight-bold text-primary">Registro dos Campus</div>
+                                        </div>
+                                        <div class="col-x1-1 col-md-6 mb-4" style = "margin-bottom: 0px !important; text-align: right;">
+                                            <div class="h5 mb-0 font-weight-bold text-primary">
+                                                <a href="{% url 'campus-create' %}" class="btn btn-dark">Adicionar</a>
+                                            </div>
+                                        </div>
 
-                <div class="col-xl-3 col-md-6 mb-4">
-                    <div class="card shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div style = "position: absolute; left: 70%;">
-                                        <a href="{% url 'campus-create' %}" class="btn btn-dark">Adicionar</a>
+
                                     </div>
+
                                 </div>
                             </div>
                         </div>

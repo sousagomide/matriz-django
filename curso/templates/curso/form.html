@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
 {% block title %}
     <title>SGM - Cadastrar Campus</title>
 {% endblock %}
@@ -13,7 +14,7 @@
     </div>
     <form action="" method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
+        
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </form>
 {% endblock %}
