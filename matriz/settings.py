@@ -92,7 +92,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',
-        'PORT': '5432' # ou porta 5432 ou 5433
+        'PORT': '5433' # ou porta 5432 ou 5433
     }
 }
 
