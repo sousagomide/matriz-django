@@ -26,12 +26,14 @@
                                         <div class="col-x1-3 col-md-6 mb-4" style = "padding: 10px; margin-bottom: 0px !important; padding-left: 30px !important;">
                                             <div class="h5 mb-0 font-weight-bold text-primary">Registro dos Campus</div>
                                         </div>
-                                        <div class="col-x1-1 col-md-6 mb-4" style = "margin-bottom: 0px !important; text-align: right;">
-                                            <div class="h5 mb-0 font-weight-bold text-primary">
-                                                <a href="{% url 'campus-create' %}" class="btn btn-dark">Adicionar</a>
+                                        
+                                        {% if request.user.groups.all.0.name == 'Administrador' %}
+                                            <div class="col-x1-1 col-md-6 mb-4" style = "margin-bottom: 0px !important; text-align: right;">
+                                                <div class="h5 mb-0 font-weight-bold text-primary">
+                                                    <a href="{% url 'campus-create' %}" class="btn btn-dark">Adicionar</a>
+                                                </div>
                                             </div>
-                                        </div>
-
+                                        {% endif %}
 
                                     </div>
 
@@ -65,12 +67,16 @@
                                 <td>{{ c.nome }}</td>
                                 <td>{{ c.sigla }}</td>
                                 <td align="center">
-                                    <a href="{% url 'campus-update' c.id %}" style = "padding-right: 20px; text-decoration: none;">
-                                        <i class="fas fa-solid fa-edit fa-lg"></i>
-                                    </a>
-                                    <a href="{% url 'campus-delete' c.id %}">
-                                        <i class="fas fa-solid fa-trash fa-lg"></i>
-                                    </a>
+                                    {% if request.user.groups.all.0.name == 'Administrador' %}
+                                        <a href="{% url 'campus-update' c.id %}" style = "padding-right: 20px; text-decoration: none;">
+                                            <i class="fas fa-solid fa-edit fa-lg"></i>
+                                        </a>
+                                        <a href="{% url 'campus-delete' c.id %}">
+                                            <i class="fas fa-solid fa-trash fa-lg"></i>
+                                        </a>
+                                    {% else %}
+                                        &nbsp;
+                                    {% endif %}
                                 </td>
                             </tr>
                         {% empty %}

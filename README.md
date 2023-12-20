@@ -23,6 +23,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
     <li>whitenoise</li>
     <li>django-bootstrap-v5</li>
     <li>django-crispy-forms</li>
+    <li>django-braces</li>
     <li>crispy-bootstrap5</li>
     <li>django-stdimage</li>
     <li>psycopg2.binary</li>
