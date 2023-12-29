@@ -27,6 +27,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
     <li>crispy-bootstrap5</li>
     <li>django-stdimage</li>
     <li>psycopg2.binary</li>
+    <li>django-cleanup</li>
 </ul>
 
 # Comandos
@@ -47,7 +48,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
         </tr>
         <tr>
             <td>2</td>
-            <td>pip install django whitenoise django-bootstrap-v5 django-stdimage psycopg2.binary django-crispy-forms crispy-bootstrap5</td>
+            <td>pip install django whitenoise django-bootstrap-v5 django-stdimage psycopg2.binary django-crispy-forms crispy-bootstrap5 django-cleanup</td>
             <td>Instalação das bibliotecas</td>
         </tr>
         <tr>
@@ -87,7 +88,8 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
         'stdimage',
         'bootstrap5',
         'crispy_forms',
-        'crispy_bootstrap5'
+        'crispy_bootstrap5',
+        'django_cleanup.apps.CleanupConfig'
     ]
     CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
     CRISPY_TEMPLATE_PACK = 'bootstrap5'

@@ -24,7 +24,7 @@ class CampusCreate(GroupRequiredMixin, LoginRequiredMixin, CreateView):
     group_required = u'Administrador'
     # group_required = [u'Administrador', u'Docente']
     model = Campus
-    fields = ['nome', 'sigla']
+    fields = ['nome', 'sigla', 'arquivo']
     template_name = 'campus/form.html'
     success_url = reverse_lazy('campus-index')
 
@@ -39,7 +39,7 @@ class CampusUpdate(GroupRequiredMixin, LoginRequiredMixin, UpdateView):
     login_url = reverse_lazy('login')
     group_required = u'Administrador'
     model = Campus
-    fields = ['nome', 'sigla']
+    fields = ['nome', 'sigla', 'arquivo']
     template_name = 'campus/form.html'
     success_url = reverse_lazy('campus-index')
 

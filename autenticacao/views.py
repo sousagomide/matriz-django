@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 
 from autenticacao.forms import UsuarioForm
+from autenticacao.models import Perfil
 
 
 class UsuarioCreate(CreateView):
@@ -16,5 +17,6 @@ class UsuarioCreate(CreateView):
         url = super().form_valid(form)
         self.object.groups.add(grupo)
         self.object.save()
+        Perfil.objects.create(usuario=self.object)
         return url
 
