@@ -13,4 +13,4 @@ class Perfil(models.Model):
         db_table='perfil'
     
     def __str__(self):
-        return f'{self.nome}'
+        return f'{self.nome_completo}'

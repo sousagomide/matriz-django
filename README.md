@@ -30,6 +30,12 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
     <li>django-cleanup</li>
 </ul>
 
+# Bibliotecas JS
+
+<ul>
+    <li>jquery</li>
+</ul>
+
 # Comandos
 
 <table>
