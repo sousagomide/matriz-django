@@ -34,6 +34,7 @@ Este projeto tem como finalidade a implementação de um sistema que permitirá 
 
 <ul>
     <li>jquery</li>
+    <li>jquery mask</li>
 </ul>
 
 # Comandos
