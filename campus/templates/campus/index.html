@@ -45,8 +45,17 @@
             </div>        
         </div>
         <div class="card-body">
+            <hr>
+            <form action="?" method="GET">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="nome" id="" value="{{ request.GET.nome }}" autocomplete="off">
+                    <button class="btn btn-success space-button10px" type="submit">Buscar</button>
+                    <a href="{% url 'campus-index' %}" class="btn btn-light">Limpar</a>
+                </div>
+            </form>
+            <hr>
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-striped display" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -54,14 +63,6 @@
                             <th>&nbsp;</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Sigla</th>
-                            <th>Foto</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         {% for c in object_list %}
                             <tr>
@@ -96,7 +97,49 @@
                         {% endfor %}
                     </tbody>
                 </table>
+                <div>
+                    <ul class="pagination justify-content-center">
+    
+                        {% if page_obj.has_previous %}
+                
+                            {% if request.GET.nome %}
+                            <li class="page-item"><a class="page-link" href="?page=1&nome={{request.GET.nome}}">&laquo; Primeira</a></li>
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}&nome={{request.GET.nome}}">Anterior</a></li>
+                            {% else %}
+                            <li class="page-item"><a class="page-link" href="?page=1">&laquo; Primeira</a></li>
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Anterior</a></li>
+                            {% endif %}
+                
+                        {% endif %}
+                    
+                        <li class="page-item">
+                            <span class="page-link">Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.</span>
+                        </li>
+                    
+                        {% if page_obj.has_next %}
+                            {% if request.GET.nome %}
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}&nome={{request.GET.nome}}">Próxima</a></li>
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}&nome={{request.GET.nome}}">Última &raquo;</a></li>
+                            {% else %}
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Próxima</a></li>
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Última &raquo;</a></li>
+                            {% endif %}
+                        {% endif %}
+                    
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 {% endblock %}
+
+{% block scripts %}
+    <script>
+        new DataTable('#dataTable', {
+            info: false,
+            ordering: true,
+            paging: true
+        });
+    </script>
+{% endblock %}
+

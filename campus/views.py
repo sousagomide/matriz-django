@@ -13,11 +13,15 @@ class CampusIndexView(LoginRequiredMixin, ListView):
     login_url = reverse_lazy('login')
     model = Campus
     template_name = 'campus/index.html'
+    paginate_by = 10
 
     def get_queryset(self):
-        self.object_list = Campus.objects.filter(usuario = self.request.user)
+        txt_nome = self.request.GET.get('nome')
+        if txt_nome:
+            self.object_list = Campus.objects.filter(usuario = self.request.user, nome__icontains = txt_nome)
+        else:
+            self.object_list = Campus.objects.filter(usuario = self.request.user)
         return self.object_list
-
 
 class CampusCreate(GroupRequiredMixin, LoginRequiredMixin, CreateView):
     login_url = reverse_lazy('login')
